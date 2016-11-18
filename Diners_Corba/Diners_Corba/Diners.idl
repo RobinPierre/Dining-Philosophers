@@ -1,0 +1,7 @@
+module Diners {
+
+	interface IDiner	{
+		// put method specifications here
+	};
+
+};

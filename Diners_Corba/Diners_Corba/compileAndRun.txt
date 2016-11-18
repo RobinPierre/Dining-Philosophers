@@ -1,0 +1,16 @@
+cd to Diners_Corba directory.
+
+Compile the idl:
+idlj -fall Diners.idl
+This puts the generated files in directory Diners.
+
+Compile the handwritten and generated java code:
+javac *.java Diners\*.java
+
+Run the application (or run Diners.bat or Diners5.bat):
+start orbd -ORBInitialPort 1050 -ORBInitialHost localhost
+start java Diner diner1 true diner2 true diner2
+start java Diner diner2 false diner1 false diner1
+
+IMPORTANT NOTE:
+Each time you run the application, you must start up a new ORB.
